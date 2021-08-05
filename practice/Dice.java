@@ -43,6 +43,7 @@ public class Dice {
         numbers = new int[R];
         removeSameCombi(0,0);
     }
+
     private static void perm(int cnt){
         if(cnt == R){
             System.out.println(Arrays.toString(numbers));
