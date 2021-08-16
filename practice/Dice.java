@@ -6,10 +6,11 @@ import java.util.Arrays;
 
 public class Dice {
     static final BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    static int N = 3,R = 3;
+    static int N = 6,R = 6;
     static int[] dice = new int[]{1,2,3,4,5,6};
     static boolean[] isSelected;
     static int[] numbers;
+    static int count = 0;
     public static void main(String[] args) throws Exception{
 
         while(true){
@@ -27,9 +28,11 @@ public class Dice {
         }
     }
     private static void caseOne(){
+        count = 0;
         numbers = new int[R];
         isSelected = new boolean[6];
         perm(0);
+        System.out.println(count);
     }
     private static void caseTwo(){
         numbers = new int[R];
@@ -46,6 +49,7 @@ public class Dice {
 
     private static void perm(int cnt){
         if(cnt == R){
+            count++;
             System.out.println(Arrays.toString(numbers));
         }else{
             for(int i = 0;i<6;i++){
