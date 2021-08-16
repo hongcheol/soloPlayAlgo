@@ -1,6 +1,7 @@
 package com.algo.java.BOJ;
 
 import java.io.*;
+import java.util.Arrays;
 
 public class BOJ_17478_recursive {
     static final String START_STORY = "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.\n";
@@ -19,6 +20,14 @@ public class BOJ_17478_recursive {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         bw.write(START_STORY);
         recursiveStroy(0,n,bw);
+        char[][] map;
+        map = new char[12][];
+        for(int i = 0; i < 12; i++) {
+            map[i] = br.readLine().toCharArray();
+        }
+        for(char[] chars:map){
+            System.out.println(Arrays.toString(chars));
+        }
         bw.close();
     }
     static void recursiveStroy(int depth, int n,BufferedWriter bw) throws IOException {
