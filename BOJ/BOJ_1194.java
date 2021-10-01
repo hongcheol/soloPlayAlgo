@@ -8,7 +8,7 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 /**
- * key 6개라서 비트마스킹으로 처.
+ * key 6개라서 비트마스킹으로 처리.
  * bfs 탐색.
  */
 public class BOJ_1194 {
